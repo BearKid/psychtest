@@ -1,0 +1,67 @@
+#bgPic{
+	width:100%;
+	height:100%;
+	opacity: 0.8;
+	position:relative;
+	z-index:-1;
+	top:0px;
+	left:0px;
+}
+#rightWrap{
+	width:23%;
+	position:absolute;
+	z-index:2;
+	top:10%;
+	right:0px;
+}
+#titleWrap{
+	position:relative;
+}
+#titleWrap img{
+	margin-left:-10px;
+}
+#introduction{
+	position:relative;
+	top:2em;
+	display:block;
+}
+#introduction1,#introduction2{
+	font-size:18px;
+	line-height:2em;
+	position:absolute;
+	top:0px;
+}
+#introduction1{
+	display:none;
+}
+#introduction2{
+	display:block;
+}
+#boySymbolWrap{
+	position:absolute;
+	z-index:2;
+	top:30%;
+	right:50%;
+	display:none;
+}
+#girlSymbolWrap{
+	position:absolute;
+	z-index:2;
+	top:50%;
+	right:50%;
+	display:none;
+}
+#boySymbolWrap img,#girlSymbolWrap img{
+	width: 60%;
+	height: 60%;
+}
+#girlSymbolWrap img{
+	width: 70%;
+	height: 70%;
+}
+#boySymbol:hover,#girlSymbol:hover{
+	cursor:pointer;
+}
+#girlSymbol{
+	margin-left:-25px;
+}

@@ -34,7 +34,7 @@ a:hover{
 	background-image:url("images/bg1.jpg");
 	background-repeat:repeat;
 	background-size:cover;
-	position:fixed;
+	position:absolute;
 	top:0px;
 	left:0px;
 	z-index:-1;
@@ -62,4 +62,144 @@ a:hover{
 .questionnaire .question .option{
 	margin-bottom: 10px;
 	margin-left: 20px;
+}
+/***************************/
+.main{
+	margin-top:60px;
+	min-height:100%;
+	margin-bottom:60px;
+}
+.mainPart,.rightPart {
+	/*margin-top:60px;*/
+}
+.mainPart{
+}
+.mainPart >.content,.rightPart .wrapper{
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+}
+.rightPart {
+	padding-right: 30px;
+}
+.leftPart{
+	padding-left:20px;
+}
+.homeTab img{
+	width:40px;
+	height:40px;
+}
+.sexTabs{
+	margin-bottom:0px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	width: 99.5%;
+}
+	
+.sexTabs li{
+	width:50%;
+}
+.sexTabs .active a{
+	text-decoration:underline;
+}
+.nav-stacked li a{
+	padding-left:20px;
+	background-color: #fff;
+}
+.readMore{
+	margin-top:20px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+.readMore .title{
+	margin-bottom:0px;
+	padding-left:20px;
+}
+.readMore .nav{
+	margin-bottom:0px;
+}
+.readMore li a{
+	border:0px;
+	border-top:1px solid #ddd;
+	color:#555;
+}
+.readMore .active a{
+	color:#ccc;
+}
+.rightPart .wrapper .title{
+	border-bottom:1px solid #ddd;
+	margin:-20px;
+	margin-bottom:20px;
+	padding-left:20px;
+	color:#555;
+}
+.footer{
+	width:100%;
+	height: 50px;
+	font-size:16px;
+	text-align:center;
+	line-height:50px;
+}
+.footer a{
+	color:#eee;
+}
+.fixed-bottom{
+	position: absolute;
+	z-index:1;
+	bottom: 0px;
+	left:0px;
+}
+#boy-header{
+	height:2px;
+	background-color:#0088cc;
+}
+#boy-homeTab{
+}
+#boyTab a{
+	color:#0088cc;
+}
+#girlTab a{
+	color:#ff6666;
+}
+#boyList,#girlList{
+	margin-bottom:0px;
+}
+#boyList .icon-chevron-right, #girlList .icon-chevron-right{
+	float:right;
+	margin-right:-6px;
+	opacity:0.8;
+}
+#girlList li a{
+	color:#ff6666;
+}
+#girlList .active a{
+	color:#555;
+	background-color:#ff9999;
+}
+#boyList .active a{
+	color:#555;
+	background-color:#6699cc;
+}
+#boy-footer{
+	color:#eee;
+	background-color: #336699;
+}
+#girl-footer{
+	color:#eee;
+	background-color: #336699;
+}
+#bgMusicWrap{
+	margin-top:20px;
+	position:fixed;
+	z-index:3;
+	bottom:2px;
+	left:2px;
+}
+#bgMusicWrap img{
+	width:45px;
+	height:45px;
+	cursor:pointer;
 }

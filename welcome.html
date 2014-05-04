@@ -1,0 +1,58 @@
+<img id="bgPic" src="images/bg.jpg"/>
+<div id="rightWrap">
+	<div id="titleWrap">
+		<a href="index2.html"><img id="title" src="images/title.png"/></a>
+	</div>
+	<div id="introduction">
+		<div id="introduction1" style="display:none;">
+			想左右天下的人，须先能左右自己。</br>
+			认识自己，方能认识人生。</br>
+		</div>
+		<div id="introduction2">
+			知人者智，自知者明。</br>
+			胜人者有力，自胜者强。</br>
+			不会评价自己，就不会评价别人。</br>
+		</div>
+	</div>
+</div>
+<div id="boySymbolWrap">
+	<img id="boySymbol" src="images/boy_symbol_0.png" />
+</div>
+<div id="girlSymbolWrap">
+	<img id="girlSymbol" src="images/girl_symbol_1.png"/>
+</div>
+<script>
+$('#titleWrap').fadeIn(1000);
+$('#boySymbolWrap').fadeIn(2000,randomFloat);
+$('#girlSymbolWrap').fadeIn(2000,randomFloat);
+$('#introduction1').fadeToggle(4000,keepFadeToggle);
+$('#introduction2').fadeToggle(4000,keepFadeToggle);
+
+$("#boySymbolWrap").click(function(){
+		$("#boy").load("boy.html",function(){
+			sliderHandler.prev(function(){
+				$("#welcome").html("");
+			});
+		});
+});
+$("#girlSymbolWrap").click(function(){
+		$("#girl").load("girl.html",function(){
+			sliderHandler.next(function(){
+				$("#welcome").html("");
+			});
+		});
+});
+
+$('#boySymbol').mouseover(function(){
+	$(this).attr("src","images/boy_symbol_1.png");
+});
+$('#boySymbol').mouseout(function(){
+	$(this).attr("src","images/boy_symbol_0.png");
+});
+$('#girlSymbol').mouseover(function(){
+	$(this).attr("src","images/girl_symbol_1.png");
+});
+$('#girlSymbol').mouseout(function(){
+	$(this).attr("src","images/girl_symbol_0.png");
+});
+</script>
