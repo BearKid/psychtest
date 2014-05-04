@@ -1,0 +1,38 @@
+<div class="questionnaire">
+	<div class="question" id="question1">
+		<div class="ask">
+			繁忙的街道，人群熙熙攘攘，独自闲荡的你，漫无目的。街角处有一个很奇怪的情景：一个污糟邋遢的孩童正手提一大堆行李，行在前面的母亲却两手空空，非常潇洒。那孩童边哭边叫，讨厌非常，而那母亲也虽无过犯，面目可憎。看罢，你满心感慨，你有什么感想呢？
+		</div>
+		<div class="option">
+			<input class="choice1" type="radio" name="question1Option"/>觉得孩子很可怜。
+		</div>
+		<div class="option">
+			<input class="choice2" type="radio" name="question1Option"/>觉得母亲在训练孩子。
+		</div>
+		<div class="option">
+			<input class="choice3" type="radio" name="question1Option"/>觉得做母亲的不注重儿童教育。
+		</div>
+		<div class="option">
+			<input class="choice4" type="radio" name="question1Option"/>小孩是个不听话的调皮鬼
+		</div>
+	</div>
+</div>
+<script>
+	var resultJq = $("#rightPart .content");
+	var resultA = "这个测验是在判断你是属于哪一种脾气的人！由你的选择看来：你很多愁善感，可是敢怒不敢言，而且是绝对反对暴力的，有时候你的朋友很想推荐你角逐诺贝尔和平奖。";
+	var resultB = '这个测验是在判断你是属于哪一种脾气的人！由你的选择看来：你是个"只要我喜欢有什么不可以"的火爆分子，叛逆性强，像一颗不定时的炸弹，其实你本性不坏，只要记住"忍"字头上一把刀，忍一时之气，必能海阔天空。';
+	var resultC = "这个测验是在判断你是属于哪一这个测验是在判断你是属于哪一种脾气的人！由你的选择看来：你是大家公认的小绵羊、好好先生，不到最后关头，绝不轻言发怒，但是一旦爆发，就像决堤的洪流、怒吼的火山，一发不可收拾。";
+	var resultD = "这个测验是在判断你是属于哪一种脾气的人！由你的选择看来：你属于沉默寡言型，处事小心，通常你喜欢照自己的意思去做，所以会被别人误认为自以为是，所以要多注意人际关系的培养。";
+	$("#question1 .choice1").click(function(){
+		resultJq.html(resultA);
+	})
+	$("#question1 .choice2").click(function(){
+		resultJq.html(resultB);
+	})
+	$("#question1 .choice3").click(function(){
+		resultJq.html(resultC);
+	})
+	$("#question1 .choice4").click(function(){
+		resultJq.html(resultD);
+	})
+</script>

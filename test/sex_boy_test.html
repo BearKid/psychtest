@@ -1,0 +1,141 @@
+<div class="questionnaire">
+	<div class="question" id="question1">
+		<div class="ask">1、剪指甲的时候，你一般哪只手先给哪只手剪?</div>
+		<div class="option radio">
+			<input class="option-btn choice1" type="radio" name="question1Option"/>左手给右手剪
+		</div>
+		<div class="option radio">
+			<input class="option-btn choice2" type="radio" name="question1Option"/>右手给左手剪
+		</div>
+	</div>
+	<div class="question" id="question2">
+		<div class="ask">2、喜欢用电动剃须刀胜过刀片?</div>
+		<div class="option radio">
+			<input class="option-btn choice1" type="radio" name="question2Option"/>是
+		</div>
+		<div class="option radio">
+			<input class="option-btn choice2" type="radio" name="question2Option"/>否
+		</div>
+	</div>
+	<div class="question" id="question3">
+		<div class="ask"> 3、仔细看看自己的衣柜，里面是哪种情形?</div>
+		<div class="option radio">
+			<input class="choice1" type="radio" name="question3Option"/>很多件色彩不同的t恤或者衬衫
+		</div>
+		<div class="option radio">
+			<input class="option-btn choice2" type="radio" name="question3Option"/>只有一两个颜色的几件而已
+		</div>
+	</div>
+	<div class="question" id="question4">
+		<div class="ask"> 4、如果没别人在家，你解决晚饭的方式是：</div>
+		<div class="option radio">
+			<input class="option-btn choice1" type="radio" name="question4Option"/>出去吃或者泡面、叫外卖
+		</div>
+		<div class="option radio">
+			<input class="option-btn choice2" type="radio" name="question4Option"/>自己买点儿菜，下厨房
+		</div>
+	</div>
+	<div class="question" id="question5">
+		<div class="ask"> 5、你的头发是：</div>
+		<div class="option radio">
+			<input class="option-btn choice1" type="radio" name="question5Option"/>最简单普通的样式，黑色
+		</div>
+		<div class="option radio">
+			<input class="option-btn choice2" type="radio" name="question5Option"/>酷酷的发型，染色了，或者十分希望染色
+		</div>
+	</div>
+	<div class="question" id="question6">
+		<div class="ask"> 6、电视中主人公身遭险境，你认为他会如何脱险?</div>
+		<div class="option radio">
+			<input class="option-btn choice1" type="radio" name="question6Option"/>自己突然奋起，绝境求生，打败敌人
+		</div>
+		<div class="option radio">
+			<input class="option-btn choice2" type="radio" name="question6Option"/>被打得半死不活，可是又被人所救，挺了过来
+		</div>
+		<div class="option radio">
+			<input class="option-btn choice3" type="radio" name="question6Option"/>外援突然出现，或者是自然力量干扰了局面
+		</div>
+	</div>
+	<div class="question" id="question7">
+		<div class="ask">7、你有不止一条正装领带，而且大都是自己买的。</div>
+		<div class="option radio">
+			<input class="option-btn choice1" type="radio" name="question7Option"/>是
+		</div>
+		<div class="option radio">
+			<input class="option-btn choice2" type="radio" name="question7Option"/>否
+		</div>
+	</div>
+	<div class="question" id="question8">
+		<div class="ask"> 8、你对待紧身衣服的态度是：</div>
+		<div class="option radio">
+			<input class="option-btn choice1" type="radio" name="question8Option"/>不喜欢也不想穿
+		</div>
+		<div class="option radio">
+			<input class="option-btn choice2" type="radio" name="question8Option"/>经常穿紧身t恤或者毛衣之类的
+		</div>
+	</div>
+</div>
+<script>
+	var resultA = "阴性型：<br/>你属于典型的“不爱武装爱红装”类型男生，你的大脑性别和生理性别走向了相反了的方向。甚至有时候会被人认为很女气。你喜欢用华丽的服饰和首饰来表现个性，并且相当坚持，只要你不觉得这些行为妨碍到别人生活，就会随心所欲地过日子。逛街和看时尚杂志都是你打发实践的方法，很多情况下，这个类型的人都有相当高的艺术天分，但也可能长期不婚。<br/>诊断：你的爱好可能有些不同于一般男生，女孩子有时候也会拿你当成姐妹一般。";
+	var resultB = "偏女性型：<br/>你骨子里很有些阴柔气质，说话彬彬有礼，注重仪表，对你来说，生活的档次是非常重要的一件事情。只要你下定决心做一件事情，差不多都会终有所成，所以这个类型的人大多数拥有颇高的学历和抱负。女性化的大脑性别对你来说无论在生活上还是事业上都颇有助力，这种气质在女生眼里看来是难得的温柔。<br/>诊断：大脑中女性型别偏重的人基本没有成为领导人物的心愿，让别人羡慕自己的生活就好了。";
+	var resultC = "半女性型：<br/>你和半男性型的女生属于同一个类型，你的大脑性别以男性型别为主，夹杂以女性的柔和与韧性，你相当擅长处理人际之间事情，手腕圆滑且懂得变通。和你共事是件相当愉快的事情，而身上有种欧洲骑士的优雅和风度，也让你在异性中大有人缘。其实你心中还存在一种依赖，当外界压力过大的时候，你就会变得像孩子一样寻求庇护和关怀。<br/>诊断：适合于事业与家庭之间的男性非你莫属。";
+	var resultD = "男性型：<br/>你的大脑构造可能来自火星，和纯女性气质的女孩最为般配，也最容易出问题：你们的大脑根本来自不同的星球，不存在交流的可能。纯男性的代表人物就是萧峰，这种宁折不弯的纯粹性格也就注定了你可能会在社会生活遇到许多气闷的地方。你的生活内容比较简单，同时不能缺乏志同道合的朋友，当然，你身上独特的霸气也意味着很难被人所控制。";
+	var questionnaire = new Questionnaire2("question1");
+	$('#question1 .choice1').click(function(){
+		questionnaire.nextQ("question1","question2");
+	});
+	$('#question1 .choice2').click(function(){
+		questionnaire.nextQ("question1","question3");
+	});
+	$('#question2 .choice1').click(function(){
+		questionnaire.nextQ("question2","question3");
+	});
+	$('#question2 .choice2').click(function(){
+		questionnaire.nextQ("question2","question4");
+	});
+	$('#question3 .choice1').click(function(){
+		questionnaire.nextQ("question3","question5");
+	});
+	$('#question3 .choice2').click(function(){
+		questionnaire.nextQ("question3","question4");
+	});
+	$('#question4 .choice1').click(function(){
+		questionnaire.nextQ("question4","question6");
+	});
+	$('#question4 .choice2').click(function(){
+		questionnaire.nextQ("question3","question7");
+	});
+	$('#question5 .choice1').click(function(){
+		questionnaire.nextQ("question5","question6");
+	});
+	$('#question5 .choice2').click(function(){
+		questionnaire.nextQ("question5","question8");
+	});
+	$('#question6 .choice1').click(function(){
+		//D
+		$('#rightPart .content').html(resultD);
+	});
+	$('#question6 .choice2').click(function(){
+		//C
+		$('#rightPart .content').html(resultC);
+	});
+	$('#question6 .choice3').click(function(){
+		questionnaire.nextQ("question6","question8");
+	});
+	$('#question7 .choice1').click(function(){
+		//B
+		$('#rightPart .content').html(resultB);
+	});
+	$('#question7 .choice2').click(function(){
+		//D
+		$('#rightPart .content').html(resultD);
+	});
+	$('#question8 .choice1').click(function(){
+		//D
+		$('#rightPart .content').html(resultD);
+	});
+	$('#question8 .choice2').click(function(){
+		//A
+		$('#rightPart .content').html(resultA);
+	});
+</script>

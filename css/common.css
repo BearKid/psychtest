@@ -1,0 +1,65 @@
+*{
+	font-family:"微软雅黑";
+}
+a:hover{
+	cursor:pointer;
+}
+/*
+.row-fluid [class*="span"]{
+	height: 100%;
+}
+.row-fluid .span1,.row-fluid .span2,.row-fluid .span3,.row-fluid .span4,.row-fluid .span5,.row-fluid .span6,.row-fluid .span7,.row-fluid .span8,.row-fluid .span9,.row-fluid .span10,.row-fluid .span11,.row-fluid .span12{
+	height: 100%;
+	min-height: 100%;
+}
+	*/
+.v-center-wrap{
+	/*
+	position:relative;
+	*/
+	display:table-cell;
+	vertical-align:middle;
+}
+.v-center{
+	/*
+	position:relative;
+	top:50%;
+	*/
+	display:inline-block;
+	vertical-align:middle;
+}
+.full-bg{
+	width:100%;
+	height:100%;
+	background-image:url("images/bg1.jpg");
+	background-repeat:repeat;
+	background-size:cover;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:-1;
+	opacity:0.9;
+}
+.passage .title,.passage .writer{
+	text-align:center;
+}
+.passage .content p{
+	text-indent:2em;
+}
+/*问卷 配合js Questionnaire*/
+.questionnaire .question{
+	display:block;
+}
+.questionnaire .preface{
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom:20px;
+}
+.questionnaire .question .ask{
+	font-size: 16px;
+}
+
+.questionnaire .question .option{
+	margin-bottom: 10px;
+	margin-left: 20px;
+}

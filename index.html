@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>知己伊始</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <!-- js-->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.jplayer.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/common.js"></script>
+    <!-- css-->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/common.css" rel="stylesheet">
+	<style>
+		#bgPic{
+			width:100%;
+			height:100%;
+			opacity: 0.8;
+			position:absolute;
+			z-index:-1;
+			top:0px;
+			left:0px;
+		}
+		#rightWrap{
+			width:23%;
+			position:absolute;
+			z-index:2;
+			top:10%;
+			right:0px;
+		}
+		#titleWrap{
+			position:relative;
+		}
+		#titleWrap img{
+			margin-left:-10px;
+		}
+		#introduction{
+			position:relative;
+			top:2em;
+			display:block;
+		}
+		#introduction1,#introduction2{
+			font-size:18px;
+			line-height:2em;
+			position:absolute;
+			top:0px;
+		}
+		#introduction1{
+			display:none;
+		}
+		#introduction2{
+			display:block;
+		}
+		#boySymbolWrap{
+			position:absolute;
+			z-index:2;
+			top:30%;
+			right:100%;
+			display:none;
+		}
+		#girlSymbolWrap{
+			position:absolute;
+			z-index:2;
+			top:50%;
+			right:100%;
+			display:none;
+		}
+		#boySymbolWrap img,#girlSymbolWrap img{
+			width: 60%;
+			height: 60%;
+		}
+		#girlSymbolWrap img{
+			width: 70%;
+			height: 70%;
+		}
+		#boySymbol:hover,#girlSymbol:hover{
+			cursor:pointer;
+		}
+		#girlSymbol{
+			margin-left:-25px;
+		}
+		#bgMusicWrap{
+			position:absolute;
+			right:0px;
+			bottom:0px;
+			z-index:2;
+		}
+		#playMusic{
+			cursor:pointer;
+			width:50px;
+		}
+		#pauseMusic{
+			cursor:pointer;
+			width:50px;
+		}
+	</style>
+	</head>
+
+	<body>
+		<img id="bgPic" src="images/bg.jpg"/>
+		<div id="rightWrap">
+			<div id="titleWrap">
+				<a href="index2.html"><img id="title" src="images/title.png"/></a>
+			</div>
+			<div id="introduction">
+				<div id="introduction1" style="display:none;">
+					想左右天下的人，须先能左右自己。</br>
+					认识自己，方能认识人生。</br>
+				</div>
+				<div id="introduction2">
+					知人者智，自知者明。</br>
+					胜人者有力，自胜者强。</br>
+					不会评价自己，就不会评价别人。</br>
+				</div>
+			</div>
+		</div>
+		<div id="boySymbolWrap">
+			<a href="boy.html"><img id="boySymbol" src="images/boy_symbol_0.png" /></a>
+		</div>
+		<div id="girlSymbolWrap">
+			<a href="girl.html"><img id="girlSymbol" src="images/girl_symbol_1.png"/></a>
+		</div>
+		<div id="bgMusicWrap">
+			<div id="bgMusic"></div>
+			<img id="playMusic" src="images/play.png" style="display:none;"/>
+			<img id="pauseMusic" src="images/pause.png" style="display:block;"/>
+		</div>
+	</body>
+	<script>
+		$(document).ready(function(){
+			$('#titleWrap').fadeIn(1000);
+			$('#boySymbolWrap').fadeIn(2000).animate(null,0,randomFloat);
+			$('#girlSymbolWrap').fadeIn(2000).animate(null,0,randomFloat);
+			$('#introduction1').fadeToggle(4000,keepFadeToggle);
+			$('#introduction2').fadeToggle(4000,keepFadeToggle);
+			$("#bgMusic").jPlayer({
+				ready: function (event) {
+					$(this).jPlayer("setMedia", {
+						mp3:"audio/song.mp3"
+					}).jPlayer("play");
+				},
+				ended: function() { 
+					$(this).jPlayer("play"); 
+				},
+			});
+		});
+			
+
+		$('#boySymbol').mouseover(function(){
+			$(this).attr("src","images/boy_symbol_1.png");
+		});
+		$('#boySymbol').mouseout(function(){
+			$(this).attr("src","images/boy_symbol_0.png");
+		});
+		$('#girlSymbol').mouseover(function(){
+			$(this).attr("src","images/girl_symbol_1.png");
+		});
+		$('#girlSymbol').mouseout(function(){
+			$(this).attr("src","images/girl_symbol_0.png");
+		});
+		//bgMusic player control
+		$('#playMusic').click(function(){
+			$('#bgMusic').jPlayer("play");
+			$("#playMusic").hide();
+			$("#pauseMusic").show();
+		});
+		$('#pauseMusic').click(function(){
+			$('#bgMusic').jPlayer("pause");
+			$("#playMusic").show();
+			$("#pauseMusic").hide();
+		});
+	</script>
+</html>

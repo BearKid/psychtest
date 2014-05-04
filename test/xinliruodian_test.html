@@ -1,0 +1,38 @@
+<div class="questionnaire">
+	<div class="question" id="question1">
+		<div class="ask">
+在一个凶杀案现场，被谋害的是一位年轻女子，遇害时正好手中抓着一支断裂的口红，请用直觉推断她遇害的原因。
+		</div>
+		<div class="option">
+			<input class="choice1" type="radio" name="question1Option"/>强盗闯入家中劫财劫色
+		</div>
+		<div class="option">
+			<input class="choice2" type="radio" name="question1Option"/>男友报复她移情别恋
+		</div>
+		<div class="option">
+			<input class="choice3" type="radio" name="question1Option"/>暗恋她的人所为
+		</div>
+		<div class="option">
+			<input class="choice4" type="radio" name="question1Option"/>情敌下的毒手
+		</div>
+	</div>
+</div>
+<script>
+	var resultJq = $("#rightPart .content");
+	var resultA = "你潜意识里最大的弱点是害怕患病。你最害怕的莫过于自己得了不治之症，受尽治疗的折磨，你害怕身上的苦痛和死亡的威胁。";
+	var resultB = "你心里的弱点是害怕死亡。但不是你自己的死亡，而是你最亲密的人的死亡。因为你的感情依赖度非常高，尤其对父母、配偶、兄弟姐妹。当不幸发生后，你将无法承受。";
+	var resultC = "你最感到恐惧的是自然界无法解释的现象。灾难、恶魔等会在你的梦境或意识模糊的时候出现。这是你非常不易克服的弱点。";
+	var resultD = "你心里的弱点是害怕背叛。你无法面对情人变心或亲密的挚友出卖你。在他人恶意背叛你时，你会脆弱得失去所有反击能力。不过这个弱点不易被察觉，非要到面临困境时才会显现。";
+	$("#question1 .choice1").click(function(){
+		resultJq.html(resultA);
+	})
+	$("#question1 .choice2").click(function(){
+		resultJq.html(resultB);
+	})
+	$("#question1 .choice3").click(function(){
+		resultJq.html(resultC);
+	})
+	$("#question1 .choice4").click(function(){
+		resultJq.html(resultD);
+	})
+</script>

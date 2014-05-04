@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>知己伊始</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <!-- js-->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.jplayer.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/common.js"></script>
+    <!-- css-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+	<style>
+		#header{
+			height:2px;
+			background-color:#0088cc;
+		}
+		#main{
+			margin-top:60px;
+			min-height:100%;
+			margin-bottom:60px;
+		}
+		#mainPart,#rightPart {
+			/*margin-top:60px;*/
+		}
+		#mainPart{
+		}
+		#mainPart >.content,#rightPart .wrapper{
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+			border: 1px solid #ddd;
+		}
+		#rightPart {
+			padding-right: 30px;
+		}
+		#leftPart{
+			padding-left:20px;
+		}
+		#sexTabs{
+			margin-bottom:0px;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			width: 99.5%;
+		}
+			
+		#sexTabs li{
+			width:50%;
+		}
+		#sexTabs .active a{
+			text-decoration:underline;
+		}
+		#homeTab{
+		}
+		#homeTab img{
+			width:40px;
+			height:40px;
+		}
+		.nav-stacked li a{
+			padding-left:20px;
+			background-color: #fff;
+		}
+		#boyTab a{
+			color:#0088cc;
+		}
+		#girlTab a{
+			color:#ff6666;
+		}
+		#boyList,#girlList{
+			margin-bottom:0px;
+		}
+		#boyList .icon-chevron-right, #girlList .icon-chevron-right{
+			float:right;
+			margin-right:-6px;
+			opacity:0.8;
+		}
+		#girlList li a{
+			color:#ff6666;
+		}
+		#girlList .active a{
+			color:#555;
+			background-color:#ff9999;
+		}
+		#boyList .active a{
+			color:#555;
+			background-color:#6699cc;
+		}
+		#readMore{
+			margin-top:20px;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+		}
+		#readMore .title{
+			margin-bottom:0px;
+			padding-left:20px;
+		}
+		#readMore .nav{
+			margin-bottom:0px;
+		}
+		#readMore li a{
+			border:0px;
+			border-top:1px solid #ddd;
+		}
+		#rightPart .wrapper .title{
+			border-bottom:1px solid #ddd;
+			margin:-20px;
+			margin-bottom:20px;
+			padding-left:20px;
+			color:#555;
+		}
+		.fixed-bottom{
+			position: fixed;
+			z-index:1;
+			bottom: 0px;
+		}
+		#footer{
+			width:100%;
+			height: 50px;
+			color:#eee;
+			font-size:16px;
+			text-align:center;
+			background-color: #336699;
+			line-height:50px;
+		}
+		#bgMusicWrap{
+			margin-top:20px;
+			position:fixed;
+			z-index:3;
+			bottom:2px;
+			left:2px;
+		}
+		#bgMusicWrap img{
+			width:45px;
+			height:45px;
+			cursor:pointer;
+		}
+		#footer a{
+			color:#eee;
+		}
+	</style>
+  </head>
+<!--将.full-bg背景设在body标签上，内容将产生模糊透视效果
+	<body class="full-bg" style="background-image...">
+-->
+<!--将.full-bg背景设在div上，可取消透视效果，但可保持背景模糊
+	<div class="full-bg" style="background-image..."></div>
+-->
+<body>
+	<div class="full-bg" style="background-image:url('images/bg1.jpg');"></div>
+	<div id="header"></div>
+	<div id="main" class="row-fluid">
+		<div id="leftPart" class="span3">
+			<div id="sexTabs" class="row-fluid">
+				<div id="homeTab" class="span3 offset1"><a href="index.html"><h3><img src="images/home_tab.png"/></h3></a></div>
+				<div id="girlTab" class="span3 offset1"><a><h3>女生</h3></a></div>
+			</div>
+		  <ul id="girlList" class="nav nav-tabs nav-stacked" style="display:none;">
+			  <li onclick="typeRequest(this,'test/sex_girl_test.html','images/bg7.jpg')">
+				  <a href="#">性别测试<i class="icon-chevron-right"></i></a>
+			  </li>
+			  <li onclick="typeRequest(this,'test/qizhi_girl_test.html','images/bg8.jpg')">
+				  <a href="#">气质测试<i class="icon-chevron-right"></i></a>
+			  </li>
+			  <li onclick="typeRequest(this,'test/nvshen_test.html','images/bg9.jpg')">
+				  <a href="#">女神测试<i class="icon-chevron-right"></i></a>
+			  </li>
+			  <li onclick="typeRequest(this,'test/renyuan_test.html','images/bg10.jpg')">
+				  <a href="#">人缘测试<i class="icon-chevron-right"></i></a>
+			  </li>
+			  <li onclick="typeRequest(this,'test/quejianshi_test.html','images/bg11.jpg')">
+				  <a href="#">缺什么见识<i class="icon-chevron-right"></i></a>
+			  </li>
+			  <li onclick="typeRequest(this,'test/xinliruodian_test.html','images/bg12.jpg')">
+				  <a href="#">心理弱点测试<i class="icon-chevron-right"></i></a>
+			  </li>
+		  </ul>
+		  <div id="readMore">
+			  <div class="title"><h4>净化心灵，注入正能量</h4></div>
+			  <ul class="nav nav-tabs nav-stacked"> 
+				  <li onclick="readMoreRequest(this,'readMore/page1.html')"><a href="#">精神的三境界</a></li>
+				  <li onclick="readMoreRequest(this,'readMore/page2.html')"><a href="#">不如优雅</a></li>
+				  <li onclick="readMoreRequest(this,'readMore/page3.html')"><a href="#">给心房透一道光</a></li>
+				  <li onclick="readMoreRequest(this,'readMore/page4.html')"><a href="#">浮躁最终败给了安静</a></li>
+				  <li onclick="readMoreRequest(this,'readMore/page5.html')"><a href="#">高贵之花，在微尘之中绽放</a></li>
+			  </ul>
+		  </div>
+	  </div>
+	  <div id="mainPart" class="span6">
+		  <div class="content"></div>	
+	  </div>
+	  <div id="rightPart" class="span3">
+		  <div class="wrapper">
+			  <div class="title"><h3>结果分析</h3></div>
+			  <div class="content"></div>
+		  </div>
+	  </div>
+	  </div>
+  </div>
+  <div id="bgMusicWrap">
+	  <div id="bgMusic"></div>
+	  <img id="playMusic" src="images/play.png" style="display:none;"/>
+	  <img id="pauseMusic" src="images/pause.png" style="display:block;"/>
+  </div>
+  <div id="footer" class="fixed-bottom">
+	  感谢
+	  <a href="http://jquery.com/">Jquery</a>
+	  <a href="http://getbootstrap.com/">Bootstrap</a>
+	  <a href="http://glyphicons.com/">Glyphicons</a>
+	  提供的开发支持
+  </div>
+</body>
+</html>
+<script>
+	<!--本页专用-->
+	//请求男生/女生的类型列表项对应的页面内容
+	function typeRequest(sourceObj,url,bgUrl){
+		navActive(sourceObj);
+		$('#mainPart .content').load(url);
+		//$('.full-bg').css("background-image","url("+ bgUrl +")");
+		bgUrl = 'url('+bgUrl+')';
+		$('.full-bg').fadeTo(1000,0.1,function(){
+			$(this).css({
+				"background-image":bgUrl,
+			}).fadeTo(1000,1);
+		});
+	}
+	//@deprecated:请求男生/女生对应的列表内容
+	function sexTabSwitch(sourceObj,targetName){
+		navActive(sourceObj);
+		$('#'+targetName).children('.active').removeClass('active');
+		if(targetName == "boyList"){
+			$('#boyList').css("display","block");
+			$('#girlList').css("display","none");
+			} else{
+			$('#boyList').css("display","none");
+			$('#girlList').css("display","block");
+		}
+	}
+	//请求readMore版块列表项对应的文章
+	function readMoreRequest(sourceObj,url){
+		navActive(sourceObj);
+		$('#mainPart .content').load(url);
+	}
+	<!-- 设置 -->
+	//预加载
+	$(document).ready(function(){
+		$('#mainPart .content').load("main.html");
+		$("#bgMusic").jPlayer({
+			ready: function (event) {
+				$(this).jPlayer("setMedia", {
+					mp3:"audio/song.mp3"
+				}).jPlayer("play");
+				},
+				ended: function() { 
+					$(this).jPlayer("play"); 
+					},
+				});
+			});
+	//男/女列表滑动效果
+	$('#boyTab').click(function(){
+		navActive(this);
+		$('#boyList').slideDown(1000);
+		$('#girlList').slideUp(1000);
+		$('#header').css("background-color","#0088cc");
+		$('#footer').css("background-color","#336699");
+	})
+	$('#girlTab').click(function(){
+		navActive(this);
+		$('#girlList').slideDown(1000);
+		$('#boyList').slideUp(1000);
+		$('#header').css("background-color","#ff6666");
+		$('#footer').css("background-color","#ff6666");
+	})
+	//bgMusic player
+	$('#playMusic').click(function(){
+		$('#bgMusic').jPlayer("play");
+		$("#playMusic").hide();
+		$("#pauseMusic").show();
+	});
+	$('#pauseMusic').click(function(){
+		$('#bgMusic').jPlayer("pause");
+		$("#playMusic").show();
+		$("#pauseMusic").hide();
+	});
+</script>
+<script>
+		$("#girlList").css("display","block");
+		$('#header').css("background-color","#ff6666");
+		$('#footer').css("background-color","#ff6666");
+</script>
