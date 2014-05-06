@@ -51,14 +51,6 @@
 	right:50%;
 	display:none;
 }
-#boySymbolWrap img,#girlSymbolWrap img{
-	width: 60%;
-	height: 60%;
-}
-#girlSymbolWrap img{
-	width: 70%;
-	height: 70%;
-}
 #boySymbol:hover,#girlSymbol:hover{
 	cursor:pointer;
 }

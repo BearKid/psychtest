@@ -32,10 +32,79 @@
 .slider{
 	position:relative;
 }
+/*css 用于演示总结 */
+#ppt{
+	position:absolute;
+	z-index:999;
+	top:0px;
+	left:0px;
+	display:none;
+	width:100%;
+	height:100%;
+	overflow: auto;
+	background-color:#fff;
+}
+#ppt .content{
+	width:990px;
+	height:700px;
+	overflow:hidden;
+	margin:auto;
+}
+#ppt .content li{
+	font-size: 2em;
+	line-height: 1em;
+	margin-left: 2em;
+	padding-bottom:1.5em;
+}
+#ppt .content p{
+	font-size: 2em;
+	line-height: 2em;
+	text-indent:1.8em;
+}
+#ppt-on{
+	position:absolute;
+	z-index:999;
+	bottom:0px;
+	right:0px;
+	width:50px;
+	height:50px;
+	cursor:pointer;
+}
+#ppt-off{
+	font-size:2em;
+	color:#ccc;
+	position:absolute;
+	right:2em;
+	cursor:pointer;
+}
+#ppt-off:hover{
+	color:#333;
+}
+/*css 用于演示总结 end*/
 </style>
 </head>
 
 <body>
+<!--用于演示总结 -->
+<div id="ppt-on" onclick="$('#ppt').slideDown();"></div>
+<div id="ppt">
+	<span id="ppt-off" onclick="$('#ppt').slideUp();">x</span>
+	<div class="content">
+		<h3 style="color:#ff6666;">核心服务</h3>
+		<p><span style="color:#ff6666">♥</span>&nbsp;心理测试</p>
+		<h3 style="color:#00bb66">体验</h3>
+			<p>+&nbsp;全屏设计理念，用户浏览更专注；</p>
+			<p>+&nbsp;多种过渡动画，内容切换更自然；</p>
+			<p>+&nbsp;丰富背景切换，摆脱单一枯燥。</p>
+			<p>+&nbsp;音乐万里挑一，营造私人空间氛围</p>
+		<h3 style="color:#336699">技术</h3>
+		<ul>
+			<li style="list-style-type:circle;">局部动态加载，All in One</li>
+			<li style="list-style-type:circle;">photoshop、html/css /js、ajax</li>
+		</ul>
+	</div>
+</div>
+<!--演示总结 end-->
 <div id="myslider">
 	<div id="boy"><!-- 男生页面 -->
 	</div><!-- 男生页面 end-->
